@@ -1,0 +1,24 @@
+{
+  "config": {
+    "target": "http://34.204.101.252",
+    "phases": [{ "duration": 5, "arrivalRate": 5 }],
+    "defaults": {
+      "headers": {
+        "User-Agent": "Artillery"
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "name": "Visitor",
+      "flow": [
+        {
+          "get": { "url": "/" }
+        },
+        {
+          "get": { "url": "/2021/06/22/hello-world/" }
+        }
+      ]
+    }
+  ]
+}
